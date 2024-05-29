@@ -1,2 +1,2 @@
 # Hotel-Management-System
-Web API with database in C#
+Web API with database MySQL in C#
