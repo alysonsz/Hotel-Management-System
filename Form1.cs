@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +18,6 @@ namespace Hotel_Management_System
         MySqlDataAdapter adapter;
         MySqlCommand command;
         string sql;
-        int qtfUsers = 0;
         string id;
         public FormPrincipal()
         {
@@ -27,6 +26,7 @@ namespace Hotel_Management_System
             disableTxt();
             disableButtons();
             btnNew.Enabled = true;
+            btnSearch.Enabled = true;
         }
         private void formatGrid()
         {
@@ -35,6 +35,8 @@ namespace Hotel_Management_System
             grid.Columns[2].HeaderText = "Adress";
             grid.Columns[3].HeaderText = "CPF";
             grid.Columns[4].HeaderText = "Telephone";
+
+            grid.Columns[0].Visible = false;
         }
         private void listGrid()
         {
@@ -89,7 +91,6 @@ namespace Hotel_Management_System
             command.Parameters.AddWithValue("@tel", txtTel.Text);
             command.ExecuteNonQuery();
             connector.closedConnection();
-            qtfUsers = qtfUsers + 1;
             disableButtons();
             btnNew.Enabled = true;
             btnDelete.Enabled = true;
@@ -102,15 +103,21 @@ namespace Hotel_Management_System
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            qtfUsers = qtfUsers - 1;
             disableButtons();
             btnNew.Enabled = true;
-            if (qtfUsers >= 1)
-            {
-                deleteOrEdit();
-            }
-            listGrid();
+            connector.openConnection();
+
+            sql = "DELETE from client WHERE id = @id";
+            command = new MySqlCommand(sql, connector.sqlConnector);
+            command.Parameters.AddWithValue("@id", id);
+            command.ExecuteNonQuery();
+            connector.closedConnection();
             MessageBox.Show("Deleted successfully!", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            disableButtons();
+            clearTxt();
+            disableTxt();
+            btnNew.Enabled = true;
+            listGrid();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -119,10 +126,6 @@ namespace Hotel_Management_System
             disableTxt();
             clearTxt();
             btnNew.Enabled = true;
-            if (qtfUsers >= 1)
-            {
-                deleteOrEdit();
-            }
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -169,6 +172,7 @@ namespace Hotel_Management_System
             txtAdress.Text = "";
             txtCPF.Text = "";
             txtTel.Text = "";
+            txtSearch.Text = "";
         }
         private void enableTxt()
         {
@@ -222,6 +226,25 @@ namespace Hotel_Management_System
             txtAdress.Text = grid.CurrentRow.Cells[2].Value.ToString();
             txtCPF.Text = grid.CurrentRow.Cells[3].Value.ToString();
             txtTel.Text = grid.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.ToString().Trim() == "")
+            {
+                MessageBox.Show("Search unsuccessfully!");
+                txtSearch.Text = "";
+                txtSearch.Focus();
+                return;
+            }
+            connector.openConnection();
+            sql = "SELECT name = @name from client WHERE name = @name";
+            command = new MySqlCommand(sql, connector.sqlConnector);
+            command.Parameters.AddWithValue("@name", Name);
+            formatGrid();
+            command.ExecuteNonQuery();
+            connector.closedConnection();
+            listGrid();
         }
     }
 }

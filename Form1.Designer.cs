@@ -1,4 +1,4 @@
-namespace Hotel_Management_System
+﻿namespace Hotel_Management_System
 {
     partial class FormPrincipal
     {
@@ -49,6 +49,8 @@ namespace Hotel_Management_System
             this.grid = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblImage = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -250,12 +252,24 @@ namespace Hotel_Management_System
             this.lblImage.TabIndex = 22;
             this.lblImage.Text = "Image:";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Enabled = false;
+            this.btnSearch.Location = new System.Drawing.Point(899, 46);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 23;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1533, 556);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblImage);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grid);
@@ -310,6 +324,8 @@ namespace Hotel_Management_System
         private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblImage;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

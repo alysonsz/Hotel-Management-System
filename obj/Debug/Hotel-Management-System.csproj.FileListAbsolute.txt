@@ -15,3 +15,20 @@ C:\Users\alyso\Desktop\programação\Hotel-Management-System\bin\Debug\System.Bu
 C:\Users\alyso\Desktop\programação\Hotel-Management-System\bin\Debug\MySql.Data.xml
 C:\Users\alyso\Desktop\programação\Hotel-Management-System\obj\Debug\Hotel_Management_System.FormPrincipal.resources
 C:\Users\alyso\Desktop\programação\Hotel-Management-System\obj\Debug\Hotel-Ma.7D83CDAC.Up2Date
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\Hotel-Management-System.exe.config
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\Hotel-Management-System.exe
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\Hotel-Management-System.pdb
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\MySql.Data.dll
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\System.Memory.dll
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\System.Buffers.dll
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\bin\Debug\MySql.Data.xml
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\obj\Debug\Hotel-Management-System.csproj.AssemblyReference.cache
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\obj\Debug\Hotel_Management_System.FormPrincipal.resources
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\obj\Debug\Hotel_Management_System.Properties.Resources.resources
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\obj\Debug\Hotel-Management-System.csproj.GenerateResource.cache
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\obj\Debug\Hotel-Management-System.csproj.CoreCompileInputs.cache
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\obj\Debug\Hotel-Ma.7D83CDAC.Up2Date
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\obj\Debug\Hotel-Management-System.exe
+C:\Users\alyso\Desktop\⠀⠀⠀ ⠀⠀⠀\Hotel-Management-System\obj\Debug\Hotel-Management-System.pdb
